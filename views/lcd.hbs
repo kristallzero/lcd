@@ -1,0 +1,15 @@
+<p>You can write something here and Arduino will send it to lcd display</p>
+<p>Remember that display is 16x2, so you can't send more than 32 symbols</p>
+
+<form action="/lcd" method="post">
+  <div><span>First string: </span><input type="text" name="fs" required maxlength="20"></div>
+  <div><span>Second string: </span><input type="text" name="ss" required maxlength="16"></div>
+  <input type="submit" value="Submit">
+</form>
+
+{{#if success}}
+<p style="color: green;">message was successfuly sent</p>
+{{/if}}
+{{#if error}}
+<p style="color: red;">don't try to break the rules</p>
+{{/if}}
